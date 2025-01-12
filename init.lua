@@ -91,7 +91,11 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
+
+-- Shortcuts
+-- Lagre filen med <leader>w
+vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
 
 -- [[ Setting options ]]
 require 'options'
@@ -104,6 +108,8 @@ require 'lazy-bootstrap'
 
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
+
+-- Fil: init.lua eller lua/konfigurasjon.lua
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
